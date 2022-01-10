@@ -28,10 +28,10 @@ public class TesteDois {
 		
 		while(iter.hasNext()){
 			String valor = iter.next();
-			if(valor != ultimoValor) {
-				ultimoValor = valor;
-			} else {
+			if(valor.equals(ultimoValor)) {
 				iter.remove();
+			} else {
+				ultimoValor = valor;
 			}	
 		}
 		return lista;
